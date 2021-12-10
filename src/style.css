@@ -38,6 +38,9 @@ body {
     width: 100vw;
     overflow: hidden;
 }
+.slidn {
+    z-index: -10;
+}
 .bgImg {
     position: absolute;
     z-index: -3;
