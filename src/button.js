@@ -8,7 +8,11 @@ function reverseAB(str) {
 
 document.addEventListener("keydown", event => {
 	var keyName = event.key;
-	console.log(`keydown:${keyName}`);
+	if (event.keyCode == 39) {
+		keyName = "a";
+	} else if (event.keyCode == 37) {
+		keyName = "b";
+	}
 	if (screen.stage == "start") {
         if (keyName == "e") {
             space.loop = true;
@@ -25,5 +29,14 @@ document.addEventListener("keydown", event => {
 			selected = keyName;
 		}
 	}
-	var cur = keyName;
 });
+
+function btn(keyName) {
+	if (screen.stage == "quiz") {
+		if (quizState == "answer") {
+			$(".btn" + keyName).addClass("selected");
+			$(".btn" + reverseAB(keyName)).removeClass("selected");
+			selected = keyName;
+		}
+	}
+}

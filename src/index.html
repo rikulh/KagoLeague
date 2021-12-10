@@ -14,7 +14,7 @@
 		</section>
 		<section class="start" v-if="stage === 'start'">
 			<img src="./image/logo.png" class="title">
-			<h3 class="subtitle">ボタンを押してスタート</h3>
+			<h3 class="subtitle">任意のキーを押してスタート</h3>
 		</section>
 		<section class="intro" v-else-if="stage === 'intro'">
 		</section>
@@ -25,7 +25,7 @@
 		<section class="quiz" v-else-if="stage === 'quiz'">
 			<div class="piece">
 				<div class="question">
-					<h2>火山灰の色は？</h2>
+					<h2></h2>
 			  	</div>
 				<div class="countdown">
 					<video src="./video/countdown.mp4" class="countdownVideo" muted></video>
@@ -34,13 +34,13 @@
 					<div class="queImgWrapper">
 						<img class="questionImage" src="">
 					</div>
-					<div class="choice btna">
+					<div class="choice btna" onclick="btn('a')">
 				  		<img class="imga" src="">
 				  		<div class="texta">
 							<h2>A</h2>
 				  		</div>
 					</div>
-					<div class="choice btnb">
+					<div class="choice btnb" onclick="btn('b')">
 				  		<img class="imgb" src="">
 				  		<div class="textb">
 							<h2>B</h2>
