@@ -12,20 +12,26 @@ function onEnd(str) {
 		$("#second").attr("src", "./video/" + queue + ".mp4");
 		ended = queue;
 		queue = "";
-		$("#second").css("z-index", "-1");
-		$("#first").css("z-index", "-2");
+		$("#second").css("z-index", "-2");
+		$("#first").css("z-index", "-5");
 		$("#second").get(0).play();
 		$("#second").show();
+		if (screen.stage == "open") {
+			$("#first").hide();
+		}
 		playing = "second";
 	} else {
 		console.log("1");
 		$("#first").attr("src", "./video/" + queue + ".mp4");
 		ended = queue;
 		queue = "";
-		$("#first").css("z-index", "-1");
-		$("#second").css("z-index", "-2");
+		$("#first").css("z-index", "-2");
+		$("#second").css("z-index", "-5");
 		$("#first").get(0).play();
 		$("#first").show();
+		if (screen.stage == "open") {
+			$("#second").hide();
+		}
 		playing = "first";
 	}
 	videoStart();

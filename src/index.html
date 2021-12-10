@@ -10,15 +10,13 @@
 		<section class="videos">
 			</video>
 			<video id="first" class="background" src="./video/start.mp4" onended="onEnd('first')" autoplay muted></video>
-			<video class="background" id="second" src="./video/start.mp4" onended="onEnd('second')" muted></video>
+			<video id="second" class="background" src="./video/start.mp4" onended="onEnd('second')" muted></video>
 		</section>
 		<section class="start" v-if="stage === 'start'">
 			<img src="./image/logo.png" class="title">
 			<h3 class="subtitle">任意のキーを押してスタート</h3>
 		</section>
-		<section class="intro" v-else-if="stage === 'intro'">
-		</section>
-		<section class="open" v-else-if="stage === 'open'">
+		<section class="intro" v-else-if="(stage === 'intro') || (stage === 'open')">
 		</section>
 		<section class="end" v-else-if="stage === 'end'">
 		</section>
