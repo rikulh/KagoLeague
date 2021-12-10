@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trokko</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="app">
+	<section class="screen">
+		<section class="videos">
+			</video>
+			<video id="first" class="background" src="./video/start.mp4" onended="onEnd('first')" autoplay muted></video>
+			<video class="background" id="second" src="./video/start.mp4" onended="onEnd('second')" muted></video>
+		</section>
+		<section class="start" v-if="stage === 'start'">
+			<img src="./image/logo.png" class="title">
+			<h3 class="subtitle">ボタンを押してスタート</h3>
+		</section>
+		<section class="intro" v-else-if="stage === 'intro'">
+		</section>
+		<section class="open" v-else-if="stage === 'open'">
+		</section>
+		<section class="end" v-else-if="stage === 'end'">
+		</section>
+		<section class="quiz" v-else-if="stage === 'quiz'">
+			<div class="piece">
+				<div class="question">
+					<h2>火山灰の色は？</h2>
+			  	</div>
+				<div class="countdown">
+					<video src="./video/countdown.mp4" class="countdownVideo" muted></video>
+				</div>
+			  	<div class="choices">
+					<div class="queImgWrapper">
+						<img class="questionImage" src="">
+					</div>
+					<div class="choice btna">
+				  		<img class="imga" src="">
+				  		<div class="texta">
+							<h2>A</h2>
+				  		</div>
+					</div>
+					<div class="choice btnb">
+				  		<img class="imgb" src="">
+				  		<div class="textb">
+							<h2>B</h2>
+				  		</div>
+					</div>
+				</div>
+				<div class="countWrapper">
+					<img class="countImg" src="image/5.png">
+				</div>
+				<div class="state">
+					<div class="stateel el0"></div>
+					<div class="stateel el1"></div>
+					<div class="stateel el2"></div>
+					<div class="stateel el3"></div>
+					<div class="stateel el4"></div>
+					<div class="stateel el5"></div>
+				</div>
+			</div>
+		</section>
+	</section>
+</body>
+<script src="./library/vue.min.js"></script>
+<script src="./library/jquery-3.6.0.min.js"></script>
+<script src="./quizSet.js"></script>
+<script src="./screen.js"></script>
+<script src="./quiz.js"></script>
+<script src="./button.js"></script>
+</html>
