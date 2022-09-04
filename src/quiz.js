@@ -140,6 +140,8 @@ function comedyEnd() {
         setTimeout(function() {
             quizState = "quiz";
             quizIndex += 1;
+            $(".btna").removeClass("selected");
+            $(".btnb").removeClass("selected");
             quiz();
         },800);
     } else {
